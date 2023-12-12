@@ -1,30 +1,50 @@
 {% load static %}
 
 <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    {% with request.resolver_match.url_name as url_name %}
+    <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
             <!-- Logo -->
-        <a class="navbar-brand" href="#"><img src="{% static 'images/logo.webp' %}" alt="Protein Planner Logo" class="logo"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <a class="navbar-brand" href="#"><img src="{% static 'images/logo.webp' %}" alt="Protein Planner Logo"
+                    class="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navigation Items-->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto mb-1">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link {% if url_name == 'home' %}active{% endif %}" aria-current="page"
+                            href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Recipes</a>
+                        <a class="nav-link"
+                            href="">Recipes</a>
+                    </li>
+                    {% if request.user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Profile</a>
+                        <a class="nav-link"
+                            href="">Add</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Add</a>
+                        <a class="nav-link {% if url_name == 'accounts_logout' %}active{% endif %}"
+                            href="/accounts/logout/">Logout</a>
                     </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if url_name == 'accounts_signup' %}active{% endif %}" href="/accounts/signup/">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if url_name == 'accounts_login' %}active{% endif %}" href="/accounts/login/">Login</a>
+                    </li>
+                    {% endif %}
                 </ul>
-            <!-- Form for search bar -->
+                <!-- Form for search bar -->
                 <form class="d-flex" role="search" method="GET" action="">
                     <input class="form-control me-2" name="q" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-secondary" type="submit">Search</button>
@@ -32,4 +52,5 @@
             </div>
         </div>
     </nav>
+    {% endwith %}
 </header>

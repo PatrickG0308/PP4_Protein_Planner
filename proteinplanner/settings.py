@@ -15,7 +15,7 @@ import os
 import dj_database_url
 
 if os.path.isfile("env.py"):
-   import env
+    import env
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -32,7 +32,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['proteinplanner-f5152efcdae3.herokuapp.com', '8000-patrickg0308-pp4-protein-1t3e4y3e02.us2.codeanyapp.com']
+ALLOWED_HOSTS = ['proteinplanner-f5152efcdae3.herokuapp.com',
+                 '8000-patrickg0308-pp4-protein-1t3e4y3e02.us2.codeanyapp.com']
 
 
 # Application definition
@@ -46,10 +47,25 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    "django.contrib.sites",
+
+    # allauth
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
 
     # Project Apps
     'home',
+
+    # Installed Apps
+    "crispy_forms",
+    "crispy_bootstrap5",
 ]
+
+SITE_ID = 1
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-patrickg0308-pp4-protein-1t3e4y3e02.us2.codeanyapp.com']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -59,14 +75,23 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # Add the account middleware:
+    "allauth.account.middleware.AccountMiddleware",
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 ROOT_URLCONF = 'proteinplanner.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR],
+        'DIRS': [
+            TEMPLATES_DIR,
+            os.path.join(BASE_DIR, "templates"),
+            os.path.join(BASE_DIR, "templates", "allauth"),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -74,9 +99,22 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # `allauth` needs this from django
+                "django.template.context_processors.request",
+            ],
+            "builtins": [
+                "crispy_forms.templatetags.crispy_forms_tags",
+                "crispy_forms.templatetags.crispy_forms_field",
             ],
         },
     },
+]
+
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    "django.contrib.auth.backends.ModelBackend",
+    # `allauth` specific authentication methods, such as login by email
+    "allauth.account.auth_backends.AuthenticationBackend",
 ]
 
 WSGI_APPLICATION = 'proteinplanner.wsgi.application'
@@ -95,7 +133,6 @@ WSGI_APPLICATION = 'proteinplanner.wsgi.application'
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
-
 
 
 # Password validation
@@ -129,6 +166,15 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+# Account Setup
+
+ACCOUNT_AUTHENTICATION_METHOD = "username_email"
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = True
+ACCOUNT_USERNAME_MIN_LENGTH = 4
+LOGIN_URL = "/accounts/login/"
+LOGIN_REDIRECT_URL = "/"
 
 
 # Static files (CSS, JavaScript, Images)
