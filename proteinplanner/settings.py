@@ -56,13 +56,29 @@ INSTALLED_APPS = [
 
     # Project Apps
     'home',
+    'recipes',
 
     # Installed Apps
     "crispy_forms",
     "crispy_bootstrap5",
+    "djrichtextfield",
 ]
 
 SITE_ID = 1
+
+DJRICHTEXTFIELD_CONFIG = {
+    "js": ["//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"],
+    "init_template": "djrichtextfield/init/ckeditor.js",
+    "settings": {
+        "toolbar": [
+            ["Format", "Bold", "Italic", "Underline"],
+            ["NumberedList", "BulletedList"],
+            ["Undo", "Redo"],
+            ["Maximize"],
+        ],
+        "format_tags": "p;h1;h2;h3",
+    },
+}
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-patrickg0308-pp4-protein-1t3e4y3e02.us2.codeanyapp.com']
