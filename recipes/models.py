@@ -5,8 +5,7 @@ from djrichtextfield.models import RichTextField
 from django_resized import ResizedImageField
 
 # Choice Fields
-MEAL_TYPES = (("breakfast", "Breakfast"),
-              ("lunch", "Lunch"), ("dinner", "Dinner"))
+MEAL_TYPES = (("breakfast", "Breakfast"), ("lunch", "Lunch"), ("dinner", "Dinner"))
 
 
 class Recipe(models.Model):
@@ -30,8 +29,7 @@ class Recipe(models.Model):
         null=False,
     )
     image_alt = models.CharField(max_length=100, null=False, blank=False)
-    meal_type = models.CharField(
-        max_length=50, choices=MEAL_TYPES, default="breakfast")
+    meal_type = models.CharField(max_length=50, choices=MEAL_TYPES, default="breakfast")
     protein = models.IntegerField()
     calories = models.IntegerField()
     posted_date = models.DateTimeField(auto_now=True)

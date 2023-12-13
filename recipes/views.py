@@ -7,26 +7,24 @@ from .forms import RecipeForm
 
 
 class Recipes(ListView):
-    
     template_name = "recipes/recipes.html"
     model = Recipe
     context_object_name = "recipes"
 
     def get_queryset(self, **kwargs):
-        query = self.request.GET.get('q')
+        query = self.request.GET.get("q")
         if query:
             recipes = self.model.objects.filter(
-                Q(title__icontains=query) |
-                Q(description__icontains=query) |
-                Q(instructions__icontains=query)
+                Q(title__icontains=query)
+                | Q(description__icontains=query)
+                | Q(instructions__icontains=query)
             )
         else:
             recipes = self.model.objects.all()
         return recipes
 
 
-class AddRecipe(LoginRequiredMixin, CreateView):    
-
+class AddRecipe(LoginRequiredMixin, CreateView):
     template_name = "recipes/add_recipe.html"
     model = Recipe
     form_class = RecipeForm
