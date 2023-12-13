@@ -58,7 +58,7 @@ INSTALLED_APPS = [
     "home",
     "recipes",
     "profiles",
-
+    "meal_planner",
     # Installed Apps
     "crispy_forms",
     "crispy_bootstrap5",
