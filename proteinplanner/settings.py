@@ -82,9 +82,9 @@ DJRICHTEXTFIELD_CONFIG = {
     },
 }
 
-CSRF_TRUSTED_ORIGINS = [
-    "https://8000-patrickg0308-pp4-protein-1t3e4y3e02.us2.codeanyapp.com"
-]
+#CSRF_TRUSTED_ORIGINS = [
+#    "https://8000-patrickg0308-pp4-protein-1t3e4y3e02.us2.codeanyapp.com"
+#]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
