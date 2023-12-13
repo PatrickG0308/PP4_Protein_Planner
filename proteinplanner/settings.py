@@ -34,7 +34,7 @@ DEBUG = "DEVELOPMENT" in os.environ
 
 ALLOWED_HOSTS = [
     "proteinplanner-f5152efcdae3.herokuapp.com",
-    "8000-patrickg0308-pp4-protein-1t3e4y3e02.us2.codeanyapp.com",
+    "8000-patrickg0308-pp4-protein-1t3e4y3e02.us2.codeanyapp.com"
 ]
 
 
