@@ -67,9 +67,6 @@ INSTALLED_APPS = [
 
 SITE_ID = 1
 
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
-
 
 DJRICHTEXTFIELD_CONFIG = {
     "js": ["//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"],
