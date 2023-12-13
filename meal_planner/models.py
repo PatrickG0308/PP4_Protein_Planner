@@ -15,5 +15,6 @@ class Meal(models.Model):
 
     def __str__(self):
         return (
-            f"{self.user.username}'s {self.recipe.meal_type} meal for {self.meal_date}"
+            f"{self.user.username}'s {self.recipe.meal_type}"
+            f"meal for {self.meal_date}"
         )
