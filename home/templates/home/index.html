@@ -1,70 +1,76 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block title %}Home{% endblock %}
-
-
+{% extends 'base.html' %} {% load static %} {% block title %}Home{% endblock %}
 {% block content %}
 
 <div class="container flex-column pt-3">
-    <!-- Call to action section -->
-    <section>
-        <div class="container px-2 py-3">
-            <div class="row flex-md-row-reverse py-3 m-0">
-                <div class="col-md-7 col-lg-5 p-0 pl-md-5 align-self-center">
-                    <img src="{% static 'images/protein_circle.webp' %}" class="img-fluid proteincircle-image"
-                        alt="Protein_food_circle">
-                </div>
-                {% if user.is_authenticated %}
-                <div class="col-md-5 col-lg-7 hero-text-outer text-center ">
-                    <h1 class="mt-4 mb-20 hero-text">Welcome back to your Protein Planner</h1>
-                    <div class="lead mt-5 welcome">
-                        Add a new recipe
-                        <a class="btn btn-secondary w-15" href="{%  url 'add_recipe' %}">Add Recipe!</a>
-                    </div>
-                    <div class="lead mt-5 welcome">
-                        Create meal plan
-                        <a class="btn btn-secondary w-15" href="{%  url 'meal_planner' %}">Create Plan!</a>
-                    </div>
-                </div>
-                {% else %}
-                <div class="col-md-5 col-lg-7 hero-text-outer text-center">
-                    <h1 class="mt-4 mb-2 hero-text">The Protein Planner</h1>
-                    <p>
-                        Welcome to our one-stop high protein recipe and meal planning hub!
-                        We believe that meal time should be a stress-free
-                        and enjoyable experience for everyone. That's why we've created a platform that not only houses
-                        a
-                        collection of delicious and diverse high protein recipes, but also provides a convenient weekly
-                        meal planning tool. With
-                        our system, you can plan your meals for the week with just a few clicks.
-                        Join us today and take the guesswork out of meal planning!
-                    </p>
-
-                    <h3>What is the main benefit of protein?</h3>
-                    <p>
-                        Every cell in the human body contains protein.
-                        The basic structure of protein is a chain of amino acids.
-                        You need protein in your diet to help your body repair cells and make new ones.
-                        Protein is also important for growth and development in children, teens, and pregnant women.
-                    </p>
-                    <h3>Does eating protein help you lose weight?</h3>
-                    <p>
-                        A high-protein diet can aid weight loss by increasing satiety,
-                        boosting metabolism, and more.
-                        You can increase your daily protein intake by incorporating lean
-                        protein sources into meals and snacks.
-                    </p>
-
-                    <div class="lead mt-4">
-                        <!--Sign Up today-->
-                        <a class="btn btn-secondary w-25" href="{%  url 'account_signup' %}">Sign Up!</a>
-
-                    </div>
-                </div>
-                {% endif %}
-            </div>
+  <!-- Call to action section -->
+  <section>
+    <div class="container px-2 py-3">
+      <div class="row flex-md-row-reverse py-3 m-0">
+        <div class="col-md-7 col-lg-5 p-0 pl-md-5 align-self-center">
+          <img
+            src="{% static 'images/protein_circle.webp' %}"
+            class="img-fluid proteincircle-image"
+            alt="Protein_food_circle"
+          />
         </div>
-    </section>
+        {% if user.is_authenticated %}
+        <div class="col-md-5 col-lg-7 hero-text-outer text-center">
+          <h1 class="mt-4 mb-20 hero-text">
+            Welcome back to your Protein Planner
+          </h1>
+          <div class="lead mt-5 welcome">
+            Add a new recipe
+            <a class="btn btn-secondary w-15" href="{%  url 'add_recipe' %}"
+              >Add Recipe!</a
+            >
+          </div>
+          <div class="lead mt-5 welcome">
+            Create meal plan
+            <a class="btn btn-secondary w-15" href="{%  url 'meal_planner' %}"
+              >Create Plan!</a
+            >
+          </div>
+        </div>
+        {% else %}
+        <div class="col-md-5 col-lg-7 hero-text-outer text-center">
+          <h1 class="mt-4 mb-2 hero-text">The Protein Planner</h1>
+          <p>
+            Welcome to our one-stop high protein recipe and meal planning hub!
+            We believe that meal time should be a stress-free and enjoyable
+            experience for everyone. That's why we've created a platform that
+            not only houses a collection of delicious and diverse high protein
+            recipes, but also provides a convenient weekly meal planning tool.
+            With our system, you can plan your meals for the week with just a
+            few clicks. Join us today and take the guesswork out of meal
+            planning!
+          </p>
 
-    {% endblock %}
+          <h3>What is the main benefit of protein?</h3>
+          <p>
+            Every cell in the human body contains protein. The basic structure
+            of protein is a chain of amino acids. You need protein in your diet
+            to help your body repair cells and make new ones. Protein is also
+            important for growth and development in children, teens, and
+            pregnant women.
+          </p>
+          <h3>Does eating protein help you lose weight?</h3>
+          <p>
+            A high-protein diet can aid weight loss by increasing satiety,
+            boosting metabolism, and more. You can increase your daily protein
+            intake by incorporating lean protein sources into meals and snacks.
+          </p>
+
+          <div class="lead mt-4">
+            <!--Sign Up today-->
+            <a class="btn btn-secondary w-25" href="{%  url 'account_signup' %}"
+              >Sign Up!</a
+            >
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  {% endblock %}
+</div>

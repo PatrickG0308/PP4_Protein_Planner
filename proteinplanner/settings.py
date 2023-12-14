@@ -85,7 +85,7 @@ DJRICHTEXTFIELD_CONFIG = {
 CSRF_TRUSTED_ORIGINS = ["https://proteinplanner-f5152efcdae3.herokuapp.com"]
 
 
-MIDDLEWARE = [    
+MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
