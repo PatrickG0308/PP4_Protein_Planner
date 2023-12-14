@@ -46,14 +46,14 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
-    "cloudinary_storage",
-    "django.contrib.staticfiles",
-    "cloudinary",
     "django.contrib.sites",
-    # allauth
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
+    "django.contrib.staticfiles",
+    "cloudinary_storage",
+    "cloudinary",
+
     # Project Apps
     "home",
     "recipes",
@@ -202,7 +202,6 @@ LOGIN_REDIRECT_URL = '/'
 
 STATIC_URL = '/static/'
 
-STATICFILES_STORAGE = "cloudinary_storage.storage.StaticHashedCloudinaryStorage"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
