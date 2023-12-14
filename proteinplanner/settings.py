@@ -16,6 +16,10 @@ import dj_database_url
 
 if os.path.isfile("env.py"):
     import env
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -208,7 +212,19 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 MEDIA_URL = "/media/"
 DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
-CLOUDINARY_URL = os.environ.get('CLOUDINARY_URL')
+# CLOUDINARY_URL = os.environ.get('CLOUDINARY_URL')
+
+# Configure Cloudinary using os.environ.get()
+CLOUDINARY_CLOUD_NAME = os.environ.get('CLOUDINARY_CLOUD_NAME')
+CLOUDINARY_API_KEY = os.environ.get('CLOUDINARY_API_KEY')
+CLOUDINARY_API_SECRET = os.environ.get('CLOUDINARY_API_SECRET')
+
+# Configure Cloudinary Storage
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': CLOUDINARY_CLOUD_NAME,
+    'API_KEY': CLOUDINARY_API_KEY,
+    'API_SECRET': CLOUDINARY_API_SECRET,
+}
 
 
 # Default primary key field type
