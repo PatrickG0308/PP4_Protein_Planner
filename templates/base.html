@@ -17,8 +17,12 @@
     />
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
 
-    {% endblock %} {% block onload_js %}
-    <script
+    {% endblock %} 
+    
+    <link rel="icon" type="image/x-icon" href="{% static '/images/favicon.ico' %}"
+    
+    {% block onload_js %}
+    <script 
       src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"
       integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg=="
       crossorigin="anonymous"

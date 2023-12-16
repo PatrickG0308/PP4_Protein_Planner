@@ -83,7 +83,7 @@ DJRICHTEXTFIELD_CONFIG = {
 }
 
 CSRF_TRUSTED_ORIGINS = ["https://8000-patrickg0308-pp4-protein-1t3e4y3e02.us2.codeanyapp.com"]
-
+X_FRAME_OPTIONS = 'https://amiresponsive.co.uk/'
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
