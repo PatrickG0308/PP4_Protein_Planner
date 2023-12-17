@@ -1,288 +1,319 @@
 # Protein Planner
 
-The Protein Planner is a meal planning app which is designed to target users who want to maximise their daily protein intake. The app allows users to create a meal plan for every meal for every day of the week!
+![am I responsive screenshot](docs/readme/testing/imgs/responsive.png)
 
-The site acts as a repository for recipes whereby users can store their own recipes and also browse other users' recipes. Users can get organised for the week ahead by adding recipes to their meal planner for each meal for every day of the week. 
+## A High Protein Meal Planning website
+>
+> The Protein Planner is a meal planning app which is designed to target users who want to maximise their daily protein intake. The app allows users to create a meal plan for every meal for every day of the week!
 
-The live link can be found here - [Protein Planner](https://proteinplanner-f5152efcdae3.herokuapp.com/)
-
-![Responsive](docs/readme/testing/imgs/responsive.png)
-## Table of Contents
-
-- [Protein Planner](#protein-planner)
-  - [Table of Contents](#table-of-contents)
-  - [User Experience (UX)](#user-experience-ux)
-    - [User Stories](#user-stories)
-      - [EPIC | User Profile](#epic--user-profile)
-      - [EPIC | User Navigation](#epic--user-navigation)
-      - [EPIC | Recipe Management](#epic--recipe-management)
-      - [EPIC | Mealplan Management](#epic--mealplan-management)
-      - [EPIC | Site Administration](#epic--site-administration)
-      - [User stories not yet implemented](#user-stories-not-yet-implemented)
-    - [Design](#design)
-      - [Imagery](#imagery)
-      - [Fonts](#fonts)
-  - [Agile Methodology](#agile-methodology)
-  - [Data Model](#data-model)
-  - [Testing](#testing)
-  - [Security Features and Defensive Design](#security-features-and-defensive-design)
-    - [User Authentication](#user-authentication)
-    - [Form Validation](#form-validation)
-    - [Database Security](#database-security)
-    - [Custom error pages:](#custom-error-pages)
-  - [Features](#features)
-    - [Header](#header)
-    - [Footer](#footer)
-    - [Home Page](#home-page)
-    - [User Account Pages](#user-account-pages)
-    - [Browse Recipes](#browse-recipes)
-    - [Recipe Detail Page](#recipe-detail-page)
-    - [Profile](#profile)
-    - [Meal Planner](#meal-planner)
-  - [Add Recipe](#add-recipe)
-
-## User Experience (UX)
-
-A visitor to Protein Planner would be someone who is most likely an adult who enjoys exercisegreat food and wants to maximise their protein intake through delicious meals.They also want the convience of a meal planner that is orientated to maximise their protein intake.
-
-### User Stories
-
-#### EPIC | User Profile
-- As a Site User I can register an account so that I can add/edit/delete my recipes and add recipes to my meal planner.
-- As a Site User, I can log in or log out of my account so that I can keep my account secure.
-- As a Site User I can manage my profile image, description and display my latest recipes.
-
-#### EPIC | User Navigation
-- As a Site User I can immediately understand the purpose of the site so that I can decide if it meets my needs.
-- As a Site User, I can intuitively navigate around the site so that I can find content and understand where I am on the site.
-- As a Site User, I can view a paginated list of recipes so that I can select a recipe to view.
-- As a Site User, I can click on a recipe so that I can read the full recipe, ingredients required, instructions on how to prepare, and view Protein and calorie count.
-
-#### EPIC | Recipe Management
-- As a Site User, I can input my favourite recipes onto the app through an easy to use interface so that I can share them with other users.
-- As a Site User, I can edit and delete recipes that I have created so that I can easily make changes without having to start over.
-- As a Site User I can view my recipes so that I can see and manage all recipes I have created in the one location.
+The site acts as a repository for recipes whereby users can store their own recipes and also browse other users' recipes. Users can get organised for the week ahead by adding recipes to their meal planner for each meal for every day of the week.
 
 
-#### EPIC | Mealplan Management
-- As a Site User, I can add/delete recipes to my weekly meal planner for a particular meal type for a paricular day of the week so that I can create a full meal plan for the week ahead.
-- As a Site User, I can view my meal plan for the week when I log into my account so that I can plan for the week ahead.
+### - By Patrick Grant
 
-#### EPIC | Site Administration
-- As a Site Administrator, I can create, read, update and delete recipes, and meal plan items so that I can manage the app content.
+## **[Live site](https://proteinplanner-f5152efcdae3.herokuapp.com/)**
 
-#### User stories not yet implemented
+---
 
-The following user stories were scoped out of the project due to time constraints and labelled as "Future Features" on the project board on Github. It is intended that these user stories will be implemented at a later date. 
+## **[Repository](https://github.com/PatrickG0308/PP4_Protein_Planner)**
 
-- As a Site User I can use search box so that I can search existing recipes to find the one I require
-- As a Site User I can create a monthly meal planner so that I have all my meals planned out for a month
+## Table of contents
 
-### Design
+<a name="contents">Back to Top</a>
 
-The site has a very simple and clean design which was purposely chosen in order to keep in theme with the site's goal. i.e. invoking a sense of calm in the user and reducing stress when it comes to everyday meal planning. 
+ 1. [UX](#ux)
+ 2. [Agile Development](#agile)
+ 3. [Features](#features)  
+ 4. [Features Left to Implement](#left)  
+ 5. [Technology used](#tech)
+ 6. [Testing](#testing)  
+ 7. [Bugs](#bugs)  
+ 8. [Deployment](#deployment)
+ 9. [Credits](#credits)
+ 10. [Content](#content)  
+ 11. [Acknowledgements](#acknowledgements) 
+ 
+ ---
+## Agile Development
 
-#### Imagery
-There are 2 static images assigned to this site. The first is the protein planner logo situated top left of the header. The second is the protein circle image on the homepage displaying the different types of high protein foods with associated values.The rest of the imagery will be uploaded by users for their individual recipes. 
+<a name="agile"></a>
 
-#### Fonts
-The Roboto font is the main font used for the body of the website. This fonts were imported via Google Fonts. Serif is the backup font, in case for any reason the main font isn't being imported into the site correctly.
+### Agile Overview
 
-## Agile Methodology
+This project was started alongside a GitHub Projects Page to track and manage the expected workload ahead.
+The aim was to set out my expected workload, list the epics and then break them down into user stories or bite sized tasks to work towards and ultimately finish the site in good time.
 
-Github projects was used to manage the development process using an agile approach. Please see link to project board [here](https://github.com/users/PatrickG0308/projects/13/views/1)
+To see Kanban please click [here](https://github.com/users/PatrickG0308/projects/13).
 
-The 11 User Stories were broken down in accordance with apps being worked on during the project.There is a brief description of the required outcome with each story. The stories were moved across the kanban board as the stories were completed.
+At the initial stages I decided on 9 core requirements for the project and 2 would likes but not important. (**Would Like**).
+
+From these I added the user stories with acceptance criteria so I can track my work effectively.
+
+Once I completed a task I would move it from **in progress** to **completed**.
+
+#### User stories
+
+##### Completed User Stories
+
+To view any of the expanded details of the user stories please click on a user story below to be taken to the Kanban project.
+If the specific user story does not auto pop up then please click on it from the project page and you will see the details and comments.
+
+ 1. [USER STORY: Create Base, Navbar and Footer](https://github.com/users/PatrickG0308/projects/13/views/1)
+ 2. [USER STORY: Search facility](https://github.com/PatrickG0308/PP4_Protein_Planner/issues/2)
+ 3. [USER STORY: Site Admin Authentication](https://github.com/PatrickG0308/PP4_Protein_Planner/issues/3)
+ 4. [USER STORY: Create Recipe function](https://github.com/PatrickG0308/PP4_Protein_Planner/issues/4)
+ 5. [USER STORY: Add Meal Planner](https://github.com/PatrickG0308/PP4_Protein_Planner/issues/5)
+ 6. [USER STORY: User Profile](https://github.com/PatrickG0308/PP4_Protein_Planner/issues/6)
+ 7. [USER STORY: Create Homepage](https://github.com/PatrickG0308/PP4_Protein_Planner/issues/7)
+ 8. [USER STORY: Existing User Login](https://github.com/PatrickG0308/PP4_Protein_Planner/issues/8)
+ 9. [USER STORY: New User registration](https://github.com/PatrickG0308/PP4_Protein_Planner/issues/9)
+
+The following User stories were not completed as they were deemed to be not necessary for this project at this time but are indications of possible future features:
+
+##### Would Like
+
+ 1. [USER STORY: Monthly Meal Planner](https://github.com/PatrickG0308/PP4_Protein_Planner/issues/10)
+ 2. [USER STORY: Paginate Recipes Page](https://github.com/PatrickG0308/PP4_Protein_Planner/issues/11)
+ 3. [USER STORY: Add Social account login](https://github.com/PatrickG0308/PP4_Protein_Planner/issues/12)
 
 
-## Data Model
-I used principles of Object-Oriented Programming throughout this project and Django’s Class-Based Generic Views.  
+[Back to Top of page](#contents)
 
-Django AllAuth was used for the user authentication system.
-
-In order for the users to create recipes a custom recipe model was required. The recipe author is a foreign key to the User model given a recipe can only have one author.
-
-
-The meal plan item model allows users to add recipes to a meal plan for a particular meal for a particular day. A meal plan item can only have one user and one recipe and is therefore linked to the User and Recipe models through foreign keys.
-
-The diagram below details the database schema.
-
-![Database Schema](docs/readme_images/database_schema.png)
-
-## Testing
-
-Testing and results can be found [here](/TESTING.md)
-
-## Security Features and Defensive Design
-
-### User Authentication
-
-- Django's LoginRequiredMixin is used to make sure that any requests to access secure pages by non-authenticated users are redirected to the login page. 
-- Django's UserPassesTestMixin is used to limit access based on certain permissions i.e. to ensure users can only edit/delete recipes and comments for which they are the author. If the user doesn't pass the test they are shown an HTTP 403 Forbidden error.
-
-### Form Validation
-If incorrect or empty data is added to a form, the form won't submit and a warning will appear to the user informing them what field raised the error. 
-
-### Database Security
-The database url and secret key are stored in the env.py file to prevent unwanted connections to the database and this was set up before the first push to Github.
-
-Cross-Site Request Forgery (CSRF) tokens were used on all forms throughout this site.
-
-### Custom error pages:
-
-Custom Error Pages were created to give the user more information on the error and to provide them with buttons to guide them back to the site.
-
-- 400 Bad Request - Protein Planner is unable to handle this request.
-- 403 Page Forbidden - Looks like you're trying to access forbidden content. Please log out and sign in to the correct account.
-- 404 Page Not Found - The page you're looking for doesn't exist.
-- 500 Server Error - Protein Planner is currently unable to handle this request
+---
 
 ## Features
 
-### Header
+<a name="features"></a>
 
-![header](docs/readme_images/features/nav_loggedout.png)
+#### User based Features Implemented
 
-**Logo**
-- A customised logo was created using Hatchful by Shopify which is a free logo generator.
-- This logo is positioned in the top left of the navigation bar. The logo is linked to the home page for ease of navigation for the user.
+- **Users can** create an account (**Create**)
+- **Users can** log into their account
+- **Users can** log out of their account
+- **Users can** add a recipe **(Create)**
+- **Users can** access their profile page & view their information and their recipes and meal plans **(Read)**
+- **Users can** add their name, image and description to their profile (**Create**)
+- **Users can** edit their image or any other information they have on their profile (**Update**)
+- **Users can** edit their recipes and meal plans (**Update**)
+- **Users can** delete their recipes at any time (**Delete**)
+- **Users can** view other users recipes for use in their meal plan
 
-**Navigation Bar**
+#### Account restrictions
 
-- The navigation bar is present at the top of every page and includes all links to the various other pages.
-- The My Account navigation link is a drop down menu which includes the Sign up and Log in links. 
-- When the user has logged in, the My Account drop down menu changes to display the user's name and a profile icon.
+- **Users cannot** access the profile section of an account without being logged in
+- **Users cannot** access their profile or meal plan until they sign up or login
+- **Users cannot** edit another users recipe or view their meal plan.
+- **Users cannot** edit their account number as this is their UserID and a primary key
+- **Users cannot** see other users meal plans or profiles
+- **Users cannot** access the admin panel of the website unless they have admin status
+---
 
-![header](docs/readme_images/features/header.png)
+#### Website features
 
-- The options to Sign up or Log in will change to the option to log out once a user has logged in.
-- Once a user has signed in, more options such as 'Add Recipe', 'My Meal Plan', 'My Recipes' and 'My Bookmarks' become available.
-- The navigation bar is fully responsive, collapsing into a hamburger menu when the screen size becomes too small.
-- Hovering over the links will lighten the font.
+### index.html
+
+- The homepage consists of a header with a logo and 4 Navigation links plus a search bar.
+- The main section explains the workings of the site and outlines the benefits of protein in a persons diet. it also shows a protein circle with a selection of protein rich foods and the protein values in grams.
+- the footer of the page provides links to social media sites, linkedin, instagram, github and facebook.
+- The Header and footer page display through the whole site.
+
+#### Header
+
+> Site Navigation
+
+![Header](docs/readme/features/imgs/header.png)
+
+- The consists of a Home, Recipes, Sign Up, Login and search area.
+- If the user is logged in they have access to profiles through the profile icon and have the ability to add recipes through the add button.
+
+---
+
+#### Main
+
+![Main](docs/readme/features/imgs/homepage.png)
+
+- The navative outlines the purposes and benefits of the site, as well as the benefits of protein in a person's meal selection
+- It also offers a Sign Up button for a new user to register for full access to the profile, meal planner and add recipe portion of the site.
+
+#### Footer
+
+![Footer](docs/readme/features/imgs/footer.png)
+
+- The footer offers links to social media sites such as linkedin, Instagram, Github and Facebook
+---
+
+### recipes.html
+
+#### Latest Recipes
+
+![recipes](docs/readme/features/imgs/recipes_loggedout.png)
+
+- When a user is not authenticated and they select the recipes link from the header they are presented with the Latest recipes available on the site with an image of the meal and a very brief description.
+- The unauthenticated user can select the recipe which will provide the user with the full description of the recipe, including Calorie and protein count, ingredients and instructions on how to prepare the meal.
+
+![recipes](docs/readme/features/imgs/selected_recipe.png)
+
+---
+
+### signup.html
+
+#### Sign Up
+
+![sign_up](docs/readme/features/imgs/signup_page.png)
+
+- The sign up page for new users requests users to enter a e-mail address,
+  a username and a password. The password requirements are clearly outlined to the user and a message will appear if the criteria is not followed.
+- Once the user presses the Sign Up button they are brought into the authenticated users area of the site were they will have access to their newly created profile, add recipes area and create a meal plan.
+---
+
+### login.html
+
+#### Sign In
+
+![sign_up](docs/readme/features/imgs/signin_page.png)
+
+- Already registered users can use the Login link on the header to easily access their content
+- Their registered username and password are reqiuired and a remember me check box is available for future logins
+- A forgot password button is available and this will bring you to the All Auth password reset page but this feature at time of writing has not been wired up. It has been added to the project planner as a would like issue to complete at a later date.
+  
+---
+### index.html - Signed in User
+
+#### Header
+
+![signed_in_header](docs/readme/features/imgs/signed_in_header.png)
+
+- When a user has authenticated the are presented with 2 new navigation links, Add (add new recipe), Profile
+  
+#### Main
+
+![signed_in_main](docs/readme/features/imgs/signed_in_home_main.png)
+
+- Authenticated user is presented with a "Welcome back to your Protein Planner" message
+- User is presented with an Add Recipe button which when pressed will bring the user directly to the Add Recipe page.
+- User is presented with a Create Plan button which when pressed will bring user directly to the Meal Planner page
+---
+
+### add.html
+
+#### Add recipe
+
+![signed_in_main](docs/readme/features/imgs/add_recipe.png)
+![signed_in_main](docs/readme/features/imgs/add_recipe_2.png)
+
+- User is requested to add the following...
+    - Recipe Title
+    - Recipe description
+    - Recipe Ingredients
+    - Recipe Instructions
+    - Recipe Image
+    - Describe image (for impaired users benefit)
+    - Meal Type (Choice of 3)
+        - Breakfast
+        - Lunch 
+        - Dinner
+    - Protein Content
+    - Calorie Count
+    - Create Recipe Button
+ ---
+  
+  ### profile.html
+
+  #### Profile
+  
+  ![signed_in_main](docs/readme/features/imgs/profile_main.png)
+
+  - Users profile page contains the following content
+    - User profile image
+    - User joined date
+    - User recipe count
+    - User profile description
+    - User profile Edit button 
+    - Meals button - redirects user to the meal planner page
+    - List of the users latest recipes which can be selected to direct user to there entered recipes
+ ---
+  #### User Profile Edit
+  
+![signed_in_main](docs/readme/features/imgs/edit_profile.png)
+
+  - User can edit their image \ avatar
+  - User can change the details in their Bio
+  ---
+
+### meal_planner.html
+
+#### User Profile Meals
+
+![signed_in_main](docs/readme/features/imgs/meal_planner_home.png)
+
+  - When user clicks the Meals button in their profile they are directed to their Weekly Meal Planner page.
+  - The meal planner is designed to start on the Monday and finish on the Sunday
+  - User clicks on the desired date
+
+ ![signed_in_main](docs/readme/features/imgs/meal_planner_type.png)
+  
+ - User is requested to select a meal type
+
+![signed_in_main](docs/readme/features/imgs/meal_planner_choice.png)
+
+  - User can search by max protein count
+  - User can search by keyword
+  - User can find random recipe
+  - Once happy with choice user can add to meal
+  - This process can be repeated for all meal types
+  - Selected meals can be changed just by adding a different meal.
+
+![signed_in_main](docs/readme/features/imgs/meal_planner_choice_2.png)
+---
+  
+
+  #### User Profile Edit Recipes
+  
+  ![signed_in_main](docs/readme/features/imgs/profile_main.png)
 
 
-### Footer
+   - When user clicks one of their added recipes listed in their profile
 
-![header](docs/readme_images/features/footer.png)
+   ![signed_in_main](docs/readme/features/imgs/user_profile_edit_recipe.png)
+   
+   - User is presented with a detailed summary of their recipe including calories, protein content, ingredients and instructions.
+   - User presented with an Edit button allowing user to edit their recipes
+   - User is presented with a delete button allowing user to delete their recipes.
+---  
+  #### Edit Button
+  
+   ![signed_in_main](docs/readme/features/imgs/edit_recipe.png)
+   ![signed_in_main](docs/readme/features/imgs/edit_recipe_2.png)
 
-- The footer section includes links to Linkedin, Instagram, Github and Facebook.
-- Clicking the links in the footer opens a separate browser tab to avoid pulling the user away from the site.
+   - Allows user to edit every aspect of their recipe
+---
+#### Delete Button
 
-### Home Page
+  ![signed_in_main](docs/readme/features/imgs/confirm_delete_recipe.png)
+  
+  - User is asked to confirm deletion of recipe
+---
 
-**Call to Action Section**
 
-![header](docs/readme_images/features/homepage.png)
 
-- The home page includes a call to action section which encourages the user to sign up to the site.
-- The CTA includes a sign up button which takes the user to the sign up page.
-- The homepage outlines what the features of the site are and outlines some of the benefits of a protein based meals
 
-**Logged in User section**
-- If a user is signed in the message changes to 'Welcome back to your Protein Planner' and the user is encouraged to add a new recipe or create a meal plan.
+
  
-
-![header](docs/readme_images/features/home_loggedin.png)
-
-### User Account Pages
-
-**Sign Up**
-
-![header](docs/readme_images/features/signup_page.png)
-
-**Log In**
-
-![header](docs/readme_images/features/signin_page.png)
-
-**Log Out**
-
-![header](docs/readme_images/features/sign_out.png)
-
-- Django allauth was installed and used to create the Sign up, Log in and Log out functionality. 
+  
+  
 
 
-### Browse Recipes
+  
+  
 
-![header](docs/readme_images/features/recipes.png)
 
-- This page displays all recipes with the most recent recipes displayed first.
-- Each card displays the recipe's image, Title and a short description. 
-- Clicking anywhere inside the recipe card will take you directly to that recipe's detailed page.
 
-### Recipe Detail Page
 
-![header](docs/readme_images/features/recipe_detail.png)
 
-- The recipe header section at the top of the page shows the recipe image, title, author, created date and time.
-- A brief description of the meal is shown as well as the Calorie count in kcals and the protein count in grams
-- A Edit and Delete button is available allowing the authorised user to edit the recipe or delete the recipe, if user is not hte creator of the recipe the Edit or delete buttons will not appear.
 
-**Edit Recipe**
 
-![header](docs/readme_images/features/edit_recipe.png)
 
-**Delete Recipe**
 
-![header](docs/readme_images/features/delete_recipe.png)
 
-- The recipe detail page also contains a list of ingredients and instructions on how to prepare the dish.
 
-**Ingredients & Instructions**
 
-![header](docs/readme_images/features/recipe_prep.png)
-
-### Profile
-
-- When a user sign's in they are presented with a "Profile" button on the NavBar
-- In the profile section the user is presented with the following
-      
-    * Image\Avatar of user it provided by user
-    * Username
-    * Date user joined    
-    * Number of recipes user has added
-    * Edit Profile button
-    * Meals button
-    * List of Latest Recipes
-
-![header](docs/readme_images/features/profile_main.png)
-
-**Edit Profile**
-
-- Allows user to edit their image and biography.
-
-![header](docs/readme_images/features/edit_profile.png)
-
-### Meal Planner
-
-- The Meal Planner is only accessible through the authenticated user Profile page through the "Meals" button 
-- The Weekly Meal planner page is based on accordian design provided by Bootstrap
-- Lists 7 Days starting on Monday finishing on Sunday 
-
-![header](docs/readme_images/features/meal_planner_home.png)
-
-- When user chooses the date they are presented with a choice
-  * Add or Update Meals 
-  * Choose Breakfast, Lunch, or Dinner
-
-![header](docs/readme_images/features/meal_planner.png)
-
-- When user selects meal type they are presented with a choice
-  1. Choose by Max Protein in grams
-  2. Search for a recipe by keyword
-  3. Use the "Find Random Recipe" button
-  4. Once happy with selection they press the "Add Meal" button.
-
-![header](docs/readme_images/features/meal_type.png)
-
-- The meal is added to the users planner
-
-![header](docs/readme_images/features/meal_planner_list.png)
-
-## Add Recipe
-
-- All authenticated users can add recipes to the site
-- Other authenticated users can view these recipes and if desired can add other users recipes to their own meal plans.
-- Only the recipe creator or site admin can edit or delete their recipes
-
-![header](docs/readme_images/features/add_recipe.png)
-![header](docs/readme_images/features/add_recipe_2.png)
