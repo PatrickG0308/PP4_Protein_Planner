@@ -44,6 +44,7 @@ main {
 }
 
 /* Footer */
+
 footer {
     flex-shrink: 0;
     background-color: var(--off-white);
@@ -61,6 +62,7 @@ footer {
 
 
 /* Header */
+
 .navbar {
     background-color: var(--off-white);
     box-shadow: var(--smal-box-shadow);

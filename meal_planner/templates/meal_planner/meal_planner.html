@@ -6,6 +6,7 @@
 
 {% block content %}
 <div class="container">
+    <!-- Weekly Meal Planner date list-->
     <h1 class="text-center p-4">Weekly Meal Planner</h1>
     <div class="accordion" id="accordionExample">
         {% for day in days %}
@@ -19,7 +20,7 @@
             </div>
             <div id="collapse{{forloop.counter}}" class="accordion-collapse collapse"
                 aria-labelledby="heading{{forloop.counter}}" data-bs-parent="#accordionExample">
-
+                <!-- Meal type selection -->
                 <div class="d-flex flex-column align-items-center p-2">
                     <p>Add or Update Meals</p>
                     <a href="{% url 'get_meals' day 'breakfast' %}" class="btn btn-secondary w-25 mb-2">Breakfast</a>

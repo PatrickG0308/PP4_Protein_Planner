@@ -45,7 +45,7 @@ class MealPlanner(LoginRequiredMixin, TemplateView):
 
 class GetMeal(TemplateView):
     """
-    Class to handle getting a random meal based on
+    Getting a random meal based on
     search queries or empty input
     """
 
@@ -60,9 +60,6 @@ class GetMeal(TemplateView):
                 protein = 9999
 
             protein = int(protein)
-            # Filter by description, title, ingredients,
-            # protein value or instructions
-            # AND protein & meal type
 
             recipes = Recipe.objects.filter(
                 Q(description__icontains=query)
@@ -103,6 +100,8 @@ class GetMeal(TemplateView):
 
 
 class AddMeal(View):
+    """Add meal to planner"""
+
     def post(self, *args, **kwargs):
         pk = kwargs["pk"]
         recipe = Recipe.objects.get(pk=pk)

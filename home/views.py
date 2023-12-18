@@ -3,6 +3,8 @@ from recipes.models import Recipe
 
 
 class Index(ListView):
+    """Latest recipes list"""
+
     template_name = "home/index.html"
     model = Recipe
     context_object_name = "recipes"

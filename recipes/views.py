@@ -33,6 +33,8 @@ class Recipes(ListView):
 
 
 class AddRecipe(LoginRequiredMixin, CreateView):
+    """Add a recipe"""
+
     template_name = "recipes/add_recipe.html"
     model = Recipe
     form_class = RecipeForm
