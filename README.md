@@ -123,6 +123,8 @@ I only deviated from this for the social media links in the footer.
 - To allow users to create a weekly meal plan by adding theirs and other users recipes.
 - To allow users to create a meal plan for the 3 daily meal types of Breakfast, Lunch and Dinner
 
+[Back to Table of Contents](#contents)
+
 ---
 
 ## Agile Development

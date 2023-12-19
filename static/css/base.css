@@ -227,11 +227,11 @@ h3>a {
     width: 100%;
 }
 
-
 @media screen and (min-width:40em) {
     .form {
         width: 50%;
-    }
+   }
+
 }
 
 @media screen and (min-width: 62.5em) {
